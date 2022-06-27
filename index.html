@@ -6,14 +6,19 @@
     </head>
 
     <body>
-        <h1 id="hello">Hello</h1>
+        <h1 id="hello">Hello<br></h1>
         <!-- External image URL, use full width of browser window -->
-        Enjoy this image:<br>
-<img src="https://i.ytimg.com/vi/7jrTr8H8bk0/hqdefault.jpg" > <br>
-        Enjoy this music:
-<audio controls>
+Enjoy this music:
+<audio controls id="play">
     <source src="rickroll.mp3" type="audio/mp3">
 </audio>
+<script>
+var play = document.getElementById("play");
+let hello = document.querySelector("#hello");
+play.addEventListener("play",function(){
+   hello.outerHTML = 'Enjoy this image:<br> <img src="https://i.ytimg.com/vi/7jrTr8H8bk0/hqdefault.jpg" > <br>'
+})
+</script>
 
     </body>
 </html>
